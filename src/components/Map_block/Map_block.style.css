@@ -1,0 +1,79 @@
+.map_block {
+  background-color: #a47578;
+  border-radius: 20px;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.map_block-id {
+  color: #fff;
+  font-size: 24px;
+}
+
+.map_block-street-column {
+  position: absolute;
+  top: -20px;
+  right: -130px;
+  transform: rotate(-90deg);
+  width: 200%;
+  font-size: 20px;
+}
+
+.map_block-street-row {
+  position: absolute;
+  width: 200%;
+  left: 10px;
+  bottom: 5px;
+  transform: translateY(100%);
+  color: #000;
+  font-size: 20px;
+}
+
+.map_block-street-edge-row {
+  position: absolute;
+  width: 200%;
+  left: 10px;
+  top: 2px;
+  transform: translateY(-100%);
+  color: #000;
+  font-size: 20px;
+}
+
+.map_block-street-edge-column {
+  position: absolute;
+  top: -20px;
+  left: -132px;
+  transform: rotate(-90deg);
+  width: 200%;
+  font-size: 20px;
+}
+
+.triangle_wrapper {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  top: calc(50% + 10px);
+  left: calc(50% + 12.5px);
+  transform: rotate(-45deg);
+  z-index: 100;
+}
+
+.triangle_wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-135deg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0L93.3013 40.9601H6.69873L50 0Z' fill='%2354854F'/%3E%3Cpath d='M50 100L6.69873 59.0399L93.3013 59.0399L50 100Z' fill='%2354854F'/%3E%3C/svg%3E%0A");
+}

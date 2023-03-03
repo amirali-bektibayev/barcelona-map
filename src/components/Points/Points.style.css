@@ -1,0 +1,118 @@
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  position: absolute;
+  cursor: pointer;
+}
+
+/* point_type */
+
+.tapas {
+  background-color: red;
+}
+
+.cafe {
+  background-color: green;
+}
+
+/* block_address */
+
+.x811 {
+  top: -3.5px;
+}
+
+.x812 {
+  top: -3.5px;
+}
+
+.x813 {
+  top: -3.5px;
+  left: calc(100% / 6);
+}
+
+.x814 {
+  top: -3.5px;
+}
+
+.x815 {
+  top: -3.5px;
+}
+
+.x816 {
+  top: -3.5px;
+}
+
+.x817 {
+  top: -3.5px;
+}
+
+.x821 {
+  bottom: -3.5px;
+}
+
+.x822 {
+  bottom: -3.5px;
+}
+
+.x823 {
+  bottom: -3.5px;
+  left: calc(100% / 6);
+}
+
+.x824 {
+  bottom: -3.5px;
+}
+
+.x825 {
+  bottom: -3.5px;
+}
+
+.x826 {
+  bottom: -3.5px;
+}
+
+.x827 {
+  bottom: -3.5px;
+}
+
+.y912 {
+  left: -3.5px;
+}
+
+.y913 {
+  left: -3.5px;
+}
+
+.y914 {
+  left: -3.5px;
+}
+
+.y915 {
+  left: -3.5px;
+}
+
+.y916 {
+  left: -3.5px;
+}
+
+.y922 {
+  right: -3.5px;
+}
+
+.y923 {
+  right: -3.5px;
+  left: calc(100% / 6);
+}
+
+.y924 {
+  right: -3.5px;
+}
+
+.y925 {
+  right: -3.5px;
+}
+
+.y926 {
+  right: -3.5px;
+}
