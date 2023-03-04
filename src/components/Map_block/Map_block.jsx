@@ -43,7 +43,7 @@ const Map_block = ({
       style={{ opacity: display == false ? "0" : "1" }}
       className="map_block"
     >
-      <div className="map_block-id">{id}</div>
+      {/* <div className="map_block-id">{id}</div> */}
       {streetColumn}
       {streetRow}
       {streetEdgeRow}
