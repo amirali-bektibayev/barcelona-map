@@ -1,63 +1,15 @@
-import React, { useState } from "react";
-import { POINTS } from "../../data/points";
-import "./Points.style.css";
-import {
-  xFirstHovCon,
-  xSecondHovCon,
-  yFirstHovCon,
-  ySecondHovCon,
-} from "./Points.helpers";
+import React from "react";
+import { ALL_POINTS } from "../../data/points/all_points";
+import Point from "../Point/Point";
 
 const Points = ({ id }) => {
-  const [hover, setHover] = useState("");
-  const [pointId, setPointId] = useState("");
-
-  const pointsSS = POINTS.map((point) => {
-    const hoverDiv = () => {
-      return (
-        <div
-          className={`hover ${xFirstHovCon(
-            point.block_address
-          )} ${xSecondHovCon(point.block_address)} ${yFirstHovCon(
-            point.block_address
-          )} ${ySecondHovCon(point.block_address)}`}
-        >
-          <div>{point.id}</div>
-        </div>
-      );
-    };
-
-    const hoverHandle = (pointId) => {
-      setPointId(pointId);
-      setHover(hoverDiv);
-    };
-
-    const hoverLeave = () => {
-      return setHover("");
-    };
-
-    return (
-      <>
-        {point.id_address == id ? (
-          <div
-            onMouseOver={() => hoverHandle(point.id)}
-            onMouseLeave={hoverLeave}
-            className={`dot ${
-              point.block_address.toString()[0] == 8 ? "x" : "y"
-            }${point.block_address} ${point.type}`}
-          >
-            {pointId == point.id ? hover : ""}
-          </div>
-        ) : (
-          ""
-        )}
-      </>
-    );
+  const points_of_block = ALL_POINTS.map((point) => {
+    return <Point id={id} point={point} />;
   });
 
   return (
     <div>
-      <div>{pointsSS}</div>
+      <div>{points_of_block}</div>
     </div>
   );
 };
