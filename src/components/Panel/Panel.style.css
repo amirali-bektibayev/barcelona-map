@@ -1,0 +1,7 @@
+.panel {
+  max-width: 1000px;
+  min-height: 100vh;
+  border: 1px solid #000;
+  margin: 20px auto;
+  padding: 20px;
+}
