@@ -5,3 +5,15 @@
   margin: 20px auto;
   padding: 20px;
 }
+
+.panel-list-title {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 25px;
+}
+
+.panel-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
