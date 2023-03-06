@@ -1,9 +1,9 @@
 /**/
 
 .hover {
-  width: 100px;
-  height: 200px;
-  border-radius: 10%;
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
   padding: 5px;
   background-color: #ecf2ff;
   position: absolute;
@@ -12,13 +12,26 @@
 
 /**/
 
+.hover-point-item {
+  font-size: 14px;
+}
+
 .hover-point-item span {
-  font-size: 13px;
+  font-size: 12px;
+}
+
+.hover-point-more-info {
+  font-size: 11px;
 }
 
 /* x1,x2,y1,y2 */
 
-.hover.x1-hov {
+.hover {
+  top: calc(100% + 20px);
+  left: 0;
+}
+
+/* .hover.x1-hov {
   transform: translate(-50%, -110%);
 }
 
@@ -32,4 +45,4 @@
 
 .hover.y2-hov {
   transform: translate(10%, -50%);
-}
+} */

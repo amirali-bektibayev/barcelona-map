@@ -77,7 +77,7 @@ export const POINTS_22 = [
     phone_number: 642277621,
     id_address: 22,
     block_address: 823,
-    id: 22822,
+    id: 22823,
     type: "tapas",
   },
   {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ALL_POINTS } from "../../data/points/all_points";
 import Point from "../Point/Point";
 
-const Points = ({ id, checkBoxArr }) => {
+const Points = ({ id, checkBoxArr, clickedPoint }) => {
   const [filteredPoints, setFilteredPoints] = useState(ALL_POINTS);
 
   useEffect(() => {
@@ -16,12 +16,12 @@ const Points = ({ id, checkBoxArr }) => {
   // });
 
   const points_of_block = filteredPoints.map((point) => {
-    return <Point id={id} point={point} />;
+    return <Point clickedPoint={clickedPoint} id={id} point={point} />;
   });
 
   return (
     <div>
-      <div>{points_of_block}</div>
+      <div className="dot-wrapper">{points_of_block}</div>
     </div>
   );
 };

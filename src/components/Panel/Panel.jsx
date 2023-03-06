@@ -4,11 +4,11 @@ import { ALL_POINTS } from "../../data/points/all_points";
 import PointsList from "../PointsList/PointsList";
 import PanelFilter from "../PanelFilter/PanelFilter";
 
-const Panel = () => {
+const Panel = ({ getPointId }) => {
   const [filteredPoints, setFilteredPoints] = useState(ALL_POINTS);
 
   const p = filteredPoints.map((p) => {
-    return <PointsList point={p} />;
+    return <PointsList getPointId={getPointId} point={p} />;
   });
 
   //   const allPoints = ALL_POINTS.map((point) => {

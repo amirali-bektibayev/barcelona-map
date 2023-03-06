@@ -22,6 +22,7 @@ const HoverPoint = ({ point }) => {
       <div className="hover-point-item hover-type">
         <span>type:</span> "{point.type}""
       </div>
+      <div className="hover-point-more-info">Click to point to see more...</div>
     </div>
   );
 };

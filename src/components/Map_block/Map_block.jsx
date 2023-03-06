@@ -18,6 +18,7 @@ const Map_block = ({
   pseudo,
   checkboxValues,
   checkBoxArr,
+  clickedPoint,
 }) => {
   return (
     <div
@@ -34,6 +35,7 @@ const Map_block = ({
         checkBoxArr={checkBoxArr}
         id={id}
         checkboxValues={checkboxValues}
+        clickedPoint={clickedPoint}
       />
     </div>
   );

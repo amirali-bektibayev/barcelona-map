@@ -11,7 +11,7 @@
 /* point_type */
 
 .tapas {
-  background-color: red;
+  background-color: rgb(212, 30, 188);
 }
 
 .cafe {
@@ -20,6 +20,12 @@
 
 .bar {
   background-color: blue;
+}
+
+/**/
+
+.dot.clicked-from-list {
+  background-color: red;
 }
 
 /* block_address */

@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HoverPoint from "../HoverPoint/HoverPoint";
 import Modal from "../Modal/Modal";
 import "./Point.style.css";
 
-const Point = ({ id, point }) => {
+const Point = ({ id, point, clickedPoint }) => {
   const [hover, setHover] = useState("");
   const [modal, setModal] = useState("");
   const [pointId, setPointId] = useState("");
-  const [pointIdForModal, setPointIdForModal] = useState("");
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   const hoverHandle = (pointId) => {
     setPointId(pointId);
+
     setHover(<HoverPoint point={point} />);
   };
 
@@ -24,7 +24,6 @@ const Point = ({ id, point }) => {
   };
 
   const openModalHandle = (pointId) => {
-    setPointIdForModal(pointId);
     setIsOpenModal(true);
     setModal(<Modal closeModal={closeModal} point={point} />);
   };
@@ -38,14 +37,13 @@ const Point = ({ id, point }) => {
           onClick={() => openModalHandle(point.id)}
           className={`dot ${
             point.block_address.toString()[0] == 8 ? "x" : "y"
-          }${point.block_address} ${point.type}`}
-        >
-          {pointId == point.id ? hover : ""}
-        </div>
+          }${point.block_address} ${point.type} `}
+        ></div>
       ) : (
         ""
       )}
       {isOpenModal ? modal : ""}
+      {pointId == point.id ? hover : ""}
     </>
   );
 };

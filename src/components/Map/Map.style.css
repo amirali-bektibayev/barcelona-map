@@ -1,3 +1,7 @@
+.map-wrapper {
+  display: flex;
+}
+
 .map {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -15,4 +19,5 @@
   height: 300px;
   border: 1px solid #000;
   margin: 20px auto;
+  padding: 10px;
 }
