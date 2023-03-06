@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
-import { ALL_POINTS } from "../../data/points/all_points";
 
 const PanelFilter = ({ filterHandle }) => {
   const [typeValue, setTypeValue] = useState("");

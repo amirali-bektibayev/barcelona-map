@@ -15,7 +15,7 @@ export const POINTS_22 = [
     id_address: 22,
     block_address: 812,
     id: 22812,
-    type: "cafe",
+    type: "bar",
   },
   {
     name: "test",
