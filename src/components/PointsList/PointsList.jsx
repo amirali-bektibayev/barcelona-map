@@ -6,9 +6,9 @@ const PointsList = ({ point, getPointId }) => {
     <div className="points-list-item">
       <div>name: {point.name}</div>
       <div>type: {point.type}</div>
-      <button onClick={() => getPointId(point.id)}>
+      {/* <button onClick={() => getPointId(point.id)}>
         Click here to see this point on map
-      </button>
+      </button> */}
     </div>
   );
 };
