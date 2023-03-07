@@ -12,5 +12,7 @@
   font-size: 25px;
 }
 
-.panel-list {
+.panel-list-pagination {
+  display: flex;
+  justify-content: center;
 }
