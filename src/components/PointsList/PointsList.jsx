@@ -1,6 +1,6 @@
 import React from "react";
 import "./PointsList.style.css";
-
+import Rating from "@mui/material/Rating";
 import { PointTypeImage } from "./PointsList.helpers";
 
 const PointsList = ({ point, getPointId }) => {
@@ -13,6 +13,9 @@ const PointsList = ({ point, getPointId }) => {
         <div>name: {point.name}</div>
         <div>type: {point.type}</div>
         <div>address: {point.address}</div>
+        <div>
+          <Rating name="read-only" value={point.rating} readOnly />
+        </div>
       </div>
 
       {/* <button onClick={() => getPointId(point.id)}>

@@ -18,7 +18,7 @@
   min-height: 300px;
   padding: 20px;
   border-radius: 5%;
-  background-color: red;
+  background-color: #fff;
   z-index: 200;
 }
 
@@ -26,5 +26,11 @@
   position: absolute;
   top: 15px;
   right: 15px;
+  width: 10px;
+  height: 10px;
   cursor: pointer;
+}
+
+.modal-close-btn:before {
+  content: "\00d7";
 }

@@ -6,6 +6,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 811,
     id: 23811,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -15,6 +16,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 812,
     id: 23812,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -24,6 +26,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 813,
     id: 23813,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -33,6 +36,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 814,
     id: 23814,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -42,6 +46,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 815,
     id: 23815,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -51,6 +56,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 816,
     id: 23816,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -60,6 +66,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 821,
     id: 23821,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -69,6 +76,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 822,
     id: 23822,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -78,6 +86,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 823,
     id: 23823,
+    rating: 4,
     type: "tapas",
   },
   {
@@ -87,6 +96,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 824,
     id: 23824,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -96,6 +106,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 825,
     id: 23825,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -105,6 +116,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 826,
     id: 23826,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -114,6 +126,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 912,
     id: 23912,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -123,6 +136,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 913,
     id: 23913,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -132,6 +146,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 914,
     id: 23914,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -141,6 +156,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 915,
     id: 23915,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -150,6 +166,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 922,
     id: 23922,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -159,6 +176,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 923,
     id: 23923,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -168,6 +186,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 924,
     id: 23924,
+    rating: 4,
     type: "cafe",
   },
   {
@@ -177,6 +196,7 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 925,
     id: 23925,
+    rating: 4,
     type: "cafe",
   },
 ];
