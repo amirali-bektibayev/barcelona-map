@@ -1,5 +1,13 @@
 .points-list-item {
+  display: flex;
   padding: 20px;
   border: 1px solid #000;
   border-radius: 5px;
+  margin: 20px 0;
+}
+
+.point-type-image {
+  width: 150px;
+  height: 100px;
+  margin-right: 15px;
 }

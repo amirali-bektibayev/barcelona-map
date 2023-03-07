@@ -1,7 +1,7 @@
 export const POINTS_22 = [
   {
     name: "test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 811,
@@ -10,7 +10,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 812,
@@ -19,7 +19,7 @@ export const POINTS_22 = [
   },
   {
     name: "test",
-    address: "test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 813,
@@ -28,7 +28,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 814,
@@ -37,7 +37,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 815,
@@ -46,7 +46,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 816,
@@ -55,7 +55,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 821,
@@ -64,7 +64,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 822,
@@ -73,7 +73,7 @@ export const POINTS_22 = [
   },
   {
     name: "Tequeños Aprada Gourmet",
-    address: "C/ de València, 127, 08011 Barcelona",
+    address: "Carrer de Teste València, 127, 08011 Barcelona",
     phone_number: 642277621,
     id_address: 22,
     block_address: 823,
@@ -82,7 +82,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 824,
@@ -91,7 +91,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 825,
@@ -100,7 +100,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 826,
@@ -109,7 +109,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 912,
@@ -118,7 +118,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 913,
@@ -127,7 +127,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 914,
@@ -136,7 +136,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 915,
@@ -145,7 +145,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 922,
@@ -154,7 +154,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 923,
@@ -163,7 +163,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 924,
@@ -172,7 +172,7 @@ export const POINTS_22 = [
   },
   {
     name: "Test",
-    address: "Test",
+    address: "Carrer de Test",
     phone_number: 931373573,
     id_address: 22,
     block_address: 925,

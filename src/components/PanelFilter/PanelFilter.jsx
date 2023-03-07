@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 const PanelFilter = ({ filterHandle }) => {
   const [typeValue, setTypeValue] = useState("");
 
-  const types = ["all", "cafe", "tapas", "bar"];
+  const types = ["all", "cafe", "tapas", "bar", "shop", "pizza", "burger"];
   const typesOptions = types.map((type, i) => {
     return (
       <MenuItem value={type} key={i}>
