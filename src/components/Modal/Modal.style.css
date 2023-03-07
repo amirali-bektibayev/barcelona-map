@@ -34,3 +34,12 @@
 .modal-close-btn:before {
   content: "\00d7";
 }
+
+.modal-line-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.modal-line-wrapper > span {
+  margin-right: 10px;
+}
