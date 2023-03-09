@@ -8,6 +8,7 @@ import Pagination from "@mui/material/Pagination";
 
 const Panel = ({ getPointId }) => {
   const [filteredPoints, setFilteredPoints] = useState(ALL_POINTS);
+  const [isPoints, setIsPoints] = useState(true);
   const {
     nextPage,
     prevPage,
@@ -24,18 +25,27 @@ const Panel = ({ getPointId }) => {
       return <PointsList getPointId={getPointId} point={p} />;
     });
 
+  console.log(p);
+
   //   const allPoints = ALL_POINTS.map((point) => {
   //     return <PointsList point={point} />;
   //   });
 
-  const filterHandle = (value) => {
-    const filtered = ALL_POINTS.filter((point) => {
-      setPage(1);
-      if (value === "all") {
+  const filterHandle = (type, minStars, maxStars) => {
+    const filteredTypes = ALL_POINTS.filter((point) => {
+      if (type === "all") {
         return point;
       }
-      return point.type === value;
+
+      return point.type === type;
     });
+    const filtered = filteredTypes.filter((point) => {
+      return point.rating > minStars && point.rating < maxStars;
+    });
+    console.log(filtered);
+    if (filtered.length == 0) {
+      setIsPoints(false);
+    } else setIsPoints(true);
     setFilteredPoints(filtered);
   };
 
@@ -49,7 +59,7 @@ const Panel = ({ getPointId }) => {
 
       <div className="panel-list-wrapper">
         <div className="panel-list-title">List</div>
-        <div className="panel-list">{p}</div>
+        <div className="panel-list">{isPoints ? p : <div>No points</div>}</div>
 
         <div className="panel-list-pagination">
           <Pagination onChange={handlePageChange} count={totalPages} />
