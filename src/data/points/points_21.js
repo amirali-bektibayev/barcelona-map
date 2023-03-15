@@ -175,7 +175,7 @@ export const POINTS_21 = [
     phone_number: 931373573,
     id_address: 21,
     block_address: 923,
-    id: 21922,
+    id: 21923,
     rating: 3,
     type: "cafe",
   },

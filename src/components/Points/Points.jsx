@@ -16,7 +16,9 @@ const Points = ({ id, checkBoxArr, clickedPoint }) => {
   // });
 
   const points_of_block = filteredPoints.map((point) => {
-    return <Point clickedPoint={clickedPoint} id={id} point={point} />;
+    return (
+      <Point key={point.id} clickedPoint={clickedPoint} id={id} point={point} />
+    );
   });
 
   return (

@@ -9,6 +9,7 @@ const Map = ({ clickedPoint }) => {
 
   const map_blocks = MAP_BLOCK.map((block) => (
     <Map_block
+      key={block.id}
       id={block.id}
       street_column={block.street_column}
       street_row={block.street_row}

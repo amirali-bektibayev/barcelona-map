@@ -8,6 +8,7 @@ import Pagination from "@mui/material/Pagination";
 
 const Panel = ({ getPointId }) => {
   const [filteredPoints, setFilteredPoints] = useState(ALL_POINTS);
+  const [points, setPoints] = useState(ALL_POINTS);
   const [isPoints, setIsPoints] = useState(true);
   const {
     nextPage,
@@ -19,13 +20,21 @@ const Panel = ({ getPointId }) => {
     totalPages,
   } = usePagination({ contentPerPage: 5, count: filteredPoints.length });
 
-  const p = filteredPoints
-    .slice(firstContentIndex, lastContentIndex)
-    .map((p) => {
-      return <PointsList getPointId={getPointId} point={p} />;
-    });
+  // const p = filteredPoints
+  //   .slice(firstContentIndex, lastContentIndex)
+  //   .map((p) => {
+  //     return <PointsList key={p.id} getPointId={getPointId} point={p} />;
+  //   });
 
-  console.log(p);
+  // console.log(p);
+
+  useEffect(() => {
+    setPoints(filteredPoints);
+  }, [filteredPoints]);
+
+  const pointsBlock = points
+    .slice(firstContentIndex, lastContentIndex)
+    .map((p) => <PointsList key={p.id} getPointId={getPointId} point={p} />);
 
   //   const allPoints = ALL_POINTS.map((point) => {
   //     return <PointsList point={point} />;
@@ -40,7 +49,7 @@ const Panel = ({ getPointId }) => {
       return point.type === type;
     });
     const filtered = filteredTypes.filter((point) => {
-      return point.rating > minStars && point.rating < maxStars;
+      return point.rating >= minStars && point.rating <= maxStars;
     });
     console.log(filtered);
     if (filtered.length == 0) {
@@ -59,7 +68,9 @@ const Panel = ({ getPointId }) => {
 
       <div className="panel-list-wrapper">
         <div className="panel-list-title">List</div>
-        <div className="panel-list">{isPoints ? p : <div>No points</div>}</div>
+        <div className="panel-list">
+          {isPoints ? pointsBlock : <div>No points</div>}
+        </div>
 
         <div className="panel-list-pagination">
           <Pagination onChange={handlePageChange} count={totalPages} />

@@ -10,7 +10,7 @@ import "./PanelFilter.style.css";
 import { ALL_POINTS } from "../../data/points/all_points";
 
 const PanelFilter = ({ filterHandle }) => {
-  const [typeValue, setTypeValue] = useState("");
+  const [typeValue, setTypeValue] = useState("all");
   const [minStars, setMinStars] = useState(0);
   const [maxStars, setMaxStars] = useState(5);
 
@@ -37,17 +37,14 @@ const PanelFilter = ({ filterHandle }) => {
   });
 
   const typeValueHandle = (event) => {
-    return event ? setTypeValue(event.target.value) : setTypeValue("all");
+    return setTypeValue(event.target.value);
   };
 
   const formHandle = (e) => {
     e.preventDefault();
 
-    if (typeValue) {
-      filterHandle(all, minStars, maxStars);
-    } else {
-      filterHandle(typeValue, minStars, maxStars);
-    }
+    filterHandle(typeValue, minStars, maxStars);
+
     console.log(typeValue, minStars, maxStars);
   };
 
