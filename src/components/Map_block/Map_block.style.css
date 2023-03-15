@@ -78,3 +78,33 @@
   background-size: cover;
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0L93.3013 40.9601H6.69873L50 0Z' fill='%2354854F'/%3E%3Cpath d='M50 100L6.69873 59.0399L93.3013 59.0399L50 100Z' fill='%2354854F'/%3E%3C/svg%3E%0A");
 }
+
+.block_2 {
+  background-color: blue;
+  border-radius: 20px 20px 0 0 !important;
+  position: relative;
+}
+
+.block_2:before {
+  content: "H";
+  position: absolute;
+  top: 80%;
+  color: #fff;
+  font-size: 50px;
+  z-index: 1000;
+}
+
+.block_2:after {
+  content: "";
+  position: absolute;
+  bottom: calc(0px - 40px);
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: blue;
+}
+
+.block_9 {
+  background-color: blue;
+  border-radius: 0 0 20px 20px !important;
+}

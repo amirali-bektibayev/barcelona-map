@@ -23,7 +23,7 @@ const Map_block = ({
   return (
     <div
       style={{ opacity: display == false ? "0" : "1" }}
-      className="map_block"
+      className={`map_block block_${id}`}
     >
       {/* <div className="map_block-id">{id}</div> */}
       {streetColumn(street_column)}
