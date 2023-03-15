@@ -55,6 +55,7 @@ const Map_filter = ({ checkboxValues }) => {
 
   return (
     <>
+      <div>Map filter</div>
       <div>
         {filters.map((n) => (
           <Filter key={n.id} {...n} onChange={onFilterChange} />

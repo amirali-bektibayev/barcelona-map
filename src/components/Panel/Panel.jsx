@@ -7,17 +7,9 @@ import usePagination from "../../hooks/usePagination";
 import Pagination from "@mui/material/Pagination";
 
 const Panel = ({ getPointId }) => {
-  const [filteredPoints, setFilteredPoints] = useState(ALL_POINTS);
   const [points, setPoints] = useState(ALL_POINTS);
-  const {
-    nextPage,
-    prevPage,
-    setPage,
-    firstContentIndex,
-    lastContentIndex,
-    page,
-    totalPages,
-  } = usePagination({ contentPerPage: 5, count: points.length });
+  const { setPage, firstContentIndex, lastContentIndex, totalPages } =
+    usePagination({ contentPerPage: 5, count: points.length });
 
   const pointsBlock = points
     .slice(firstContentIndex, lastContentIndex)

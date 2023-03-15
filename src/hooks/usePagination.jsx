@@ -33,12 +33,9 @@ const usePagination = ({ contentPerPage, count }) => {
   };
   return {
     totalPages: pageCount,
-    nextPage: () => changePage(true),
-    prevPage: () => changePage(false),
     setPage: setPageSAFE,
     firstContentIndex,
     lastContentIndex,
-    page,
   };
 };
 export default usePagination;
