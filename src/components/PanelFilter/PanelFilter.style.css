@@ -18,8 +18,8 @@
 }
 
 .panel-filter-category {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .panel-filter-category-input-wrapper {
@@ -42,7 +42,7 @@
 }
 
 .panel-filter-category-label {
-  width: 100%;
+  min-width: 200px;
   height: 100%;
   padding: 10px 30px;
   background-color: #fff;
