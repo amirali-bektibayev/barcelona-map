@@ -49,16 +49,7 @@ export const POINTS_23 = [
     rating: 4,
     type: "cafe",
   },
-  {
-    name: "Test",
-    address: "Carrer de Test",
-    phone_number: 931373573,
-    id_address: 23,
-    block_address: 816,
-    id: 23816,
-    rating: 4,
-    type: "cafe",
-  },
+
   {
     name: "Test",
     address: "Carrer de Test",
@@ -109,16 +100,7 @@ export const POINTS_23 = [
     rating: 4,
     type: "cafe",
   },
-  {
-    name: "Test",
-    address: "Carrer de Test",
-    phone_number: 931373573,
-    id_address: 23,
-    block_address: 826,
-    id: 23826,
-    rating: 4,
-    type: "cafe",
-  },
+
   {
     name: "Test",
     address: "Carrer de Test",
@@ -149,16 +131,7 @@ export const POINTS_23 = [
     rating: 4,
     type: "cafe",
   },
-  {
-    name: "Test",
-    address: "Carrer de Test",
-    phone_number: 931373573,
-    id_address: 23,
-    block_address: 915,
-    id: 23915,
-    rating: 4,
-    type: "cafe",
-  },
+
   {
     name: "Test",
     address: "Carrer de Test",
@@ -186,16 +159,6 @@ export const POINTS_23 = [
     id_address: 23,
     block_address: 924,
     id: 23924,
-    rating: 4,
-    type: "cafe",
-  },
-  {
-    name: "Test",
-    address: "Carrer de Test",
-    phone_number: 931373573,
-    id_address: 23,
-    block_address: 925,
-    id: 23925,
     rating: 4,
     type: "cafe",
   },
