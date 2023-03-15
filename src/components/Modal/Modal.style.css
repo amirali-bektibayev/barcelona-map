@@ -6,7 +6,7 @@
   height: 100%;
   background-color: #000;
   opacity: 0.3;
-  z-index: 199;
+  z-index: 1000;
 }
 
 .modal {
@@ -19,7 +19,7 @@
   padding: 20px;
   border-radius: 5%;
   background-color: #fff;
-  z-index: 200;
+  z-index: 1001;
 }
 
 .modal-close-btn {

@@ -33,6 +33,11 @@
   left: 0;
 }
 
+.hover.block_40,
+.hover.block_41 {
+  top: -140px;
+}
+
 /* .hover.x1-hov {
   transform: translate(-50%, -110%);
 }
