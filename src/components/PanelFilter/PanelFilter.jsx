@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -10,7 +10,6 @@ import "./PanelFilter.style.css";
 import { ALL_POINTS } from "../../data/points/all_points";
 
 const PanelFilter = ({ filterHandle }) => {
-  const [typeValue, setTypeValue] = useState("all");
   const [minStars, setMinStars] = useState(0);
   const [maxStars, setMaxStars] = useState(5);
 
@@ -21,39 +20,69 @@ const PanelFilter = ({ filterHandle }) => {
     setMaxStars(minStars + 1);
   }
 
-  const types = [...new Set(["all", ...ALL_POINTS.map((n) => n.type)])];
-  const typesOptions = types.map((type, i) => {
-    const selectedAll = (type) => {
-      if (type == "all") {
-        return true;
-      }
-    };
+  const [filters, setFilters] = useState([]);
 
-    return (
-      <MenuItem selected={selectedAll(type)} value={type} key={i}>
-        {type}
-      </MenuItem>
+  useEffect(() => {
+    const filterValues = [
+      ...new Set(["all", ...ALL_POINTS.map((n) => n.type)]),
+    ];
+    setFilters(
+      filterValues.map((n, i) => ({ active: false, value: n, id: i + 1 }))
     );
-  });
+  }, [ALL_POINTS]);
 
-  const typeValueHandle = (event) => {
-    return setTypeValue(event.target.value);
+  const onFilterChange = ({
+    target: {
+      checked: active,
+      dataset: { value },
+    },
+  }) => {
+    const newFilters = filters.map((n) =>
+        [n.value, "all"].includes(value) ? { ...n, active } : n
+      ),
+      isAll = newFilters
+        .filter((n) => n.value !== "all")
+        .every((n) => n.active);
+
+    newFilters.find((n) => n.value === "all").active = isAll;
+
+    setFilters(newFilters);
   };
+
+  const filteredTypes = filters.filter((n) => n.active).map((n) => n.value);
+  const filteredItems = ALL_POINTS.filter(
+    (n) =>
+      filteredTypes.includes(n.type) &&
+      n.rating >= minStars &&
+      n.rating <= maxStars
+  );
+
+  const Filter = ({ value, active, onChange }) => (
+    <div className="panel-filter-category-input-wrapper">
+      <input
+        id={value}
+        name={value}
+        type="checkbox"
+        checked={active}
+        data-value={value}
+        onChange={onChange}
+      />
+
+      <label for={value} className="panel-filter-category-label">
+        {value}
+      </label>
+    </div>
+  );
 
   const formHandle = (e) => {
     e.preventDefault();
-
-    filterHandle(typeValue, minStars, maxStars);
-
-    console.log(typeValue, minStars, maxStars);
+    filterHandle(filteredItems);
   };
-
-  const all = "all";
 
   return (
     <div className="panel-filter">
       <FormControl sx={{ width: "100%", margin: "20px 0" }}>
-        <InputLabel id="type-select-label">Type</InputLabel>
+        {/* <InputLabel id="type-select-label">Type</InputLabel>
         <Select
           labelId="type-select-label"
           id="type-select"
@@ -62,10 +91,16 @@ const PanelFilter = ({ filterHandle }) => {
           onChange={typeValueHandle}
         >
           {typesOptions}
-        </Select>
-        <Typography component="legend">Rating</Typography>
-        <Typography component="legend">Minimum stars</Typography>
+        </Select> */}
+        <div className="panel-filter-h2">Categories</div>
+        <div className="panel-filter-category">
+          {filters.map((n) => (
+            <Filter key={n.id} {...n} onChange={onFilterChange} />
+          ))}
+        </div>
+        <div className="panel-filter-h2">Rating</div>
         <div className="panel-rating-wrapper">
+          <div className="panel-filter-h3">Minimum stars: </div>
           <Rating
             name="simple-controlled"
             value={minStars}
@@ -74,8 +109,9 @@ const PanelFilter = ({ filterHandle }) => {
             }}
           />
         </div>
-        <Typography component="legend">Maximum stars</Typography>
+
         <div className="panel-rating-wrapper">
+          <div className="panel-filter-h3">Maximum stars: </div>
           <Rating
             name="simple-controlled"
             value={maxStars}
