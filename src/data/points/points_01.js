@@ -175,7 +175,7 @@ export const POINTS_01 = [
     block_address: 924,
     id: 1924,
     rating: 3,
-    type: "fast food",
+    type: "fast-food",
     website: "http://www.mcdonalds.es/productos",
     google_map: "https://goo.gl/maps/gSJEVZ8yptFXLors5",
   },
