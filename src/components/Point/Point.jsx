@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import HoverPoint from "../HoverPoint/HoverPoint";
 import Modal from "../Modal/Modal";
 import "./Point.style.css";
+import "./Point.icons.css";
+import { BLOCK_ID_CLASS } from "./Point.helpers";
 
 const Point = ({ id, point, clickedPoint }) => {
   const [hover, setHover] = useState("");
@@ -35,7 +37,7 @@ const Point = ({ id, point, clickedPoint }) => {
           onMouseOver={() => hoverHandle(point.id)}
           onMouseLeave={hoverLeave}
           onClick={() => openModalHandle(point.id)}
-          className={`dot ${
+          className={`dot ${BLOCK_ID_CLASS(point.id_address)} ${
             point.block_address.toString()[0] == 8 ? "x" : "y"
           }${point.block_address} ${point.type} `}
         ></div>
