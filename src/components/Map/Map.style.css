@@ -1,5 +1,6 @@
 .map-wrapper {
   display: flex;
+  margin-top: 80px;
 }
 
 .map {
