@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import Button from "@mui/material/Button";
 import Rating from "@mui/material/Rating";
-import Typography from "@mui/material/Typography";
 import "./PanelFilter.style.css";
 import { ALL_POINTS } from "../../data/points/all_points";
 

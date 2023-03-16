@@ -22,8 +22,6 @@ const Map = ({ clickedPoint }) => {
   ));
 
   const checkboxValues = (arr) => {
-    console.log(arr);
-
     setCheckBoxArr(arr);
   };
 

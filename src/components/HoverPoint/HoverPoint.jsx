@@ -1,5 +1,4 @@
 import React from "react";
-import {} from "./HoverPoint.helpers";
 import "./HoverPoint.style.css";
 
 const HoverPoint = ({ point }) => {

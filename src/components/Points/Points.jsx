@@ -9,12 +9,6 @@ const Points = ({ id, checkBoxArr, clickedPoint }) => {
     if (checkBoxArr) setFilteredPoints(checkBoxArr);
   }, [checkBoxArr]);
 
-  // const filtered = ALL_POINTS.filter((point) => {
-  //   if (checkBoxArr[0] == true) {
-  //     console.log("da");
-  //   }
-  // });
-
   const points_of_block = filteredPoints.map((point) => {
     return (
       <Point key={point.id} clickedPoint={clickedPoint} id={id} point={point} />
