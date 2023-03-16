@@ -2,8 +2,14 @@ import React from "react";
 import "./PointsList.style.css";
 import Rating from "@mui/material/Rating";
 import { PointTypeImage } from "./PointsList.helpers";
+import { useDispatch } from "react-redux";
+import { addClickedPoint } from "../../store/clickedSlice";
 
 const PointsList = ({ point, getPointId }) => {
+  const dispatch = useDispatch();
+
+  const pushId = () => dispatch(addClickedPoint(point));
+
   return (
     <div className="points-list-item">
       <div>
@@ -30,7 +36,7 @@ const PointsList = ({ point, getPointId }) => {
           <div>Rating:</div>
           <Rating name="read-only" value={point.rating} readOnly />
         </div>
-        <button onClick={() => getPointId(point.id)}>
+        <button onClick={() => pushId()}>
           Click here to see this point on map
         </button>
       </div>
