@@ -54,15 +54,17 @@ const Map_filter = ({ checkboxValues }) => {
   };
 
   return (
-    <>
-      <div>Map filter</div>
-      <div>
+    <div className="map-filter">
+      <div className="map-filter-title">Map filter</div>
+      <div className="map-filter-checkbox">
         {filters.map((n) => (
           <Filter key={n.id} {...n} onChange={onFilterChange} />
         ))}
       </div>
-      <button onClick={sendArr}>Search</button>
-    </>
+      <button className="map-filter-btn" onClick={sendArr}>
+        Search
+      </button>
+    </div>
   );
 
   // const [checkedTapas, setCheckedTapas] = useState(true);

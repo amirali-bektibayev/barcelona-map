@@ -1,0 +1,31 @@
+.map-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.map-filter-title {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.map-filter-checkbox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.map-filter-btn {
+  min-height: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.map-filter-btn:hover {
+  background-color: #a47578;
+  color: #fff;
+}

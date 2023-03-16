@@ -30,7 +30,7 @@ const Map = ({ clickedPoint }) => {
   return (
     <div className="map-wrapper">
       <div className="map">{map_blocks}</div>
-      <div className="map-filter">
+      <div>
         <Map_filter checkboxValues={checkboxValues} />
       </div>
     </div>

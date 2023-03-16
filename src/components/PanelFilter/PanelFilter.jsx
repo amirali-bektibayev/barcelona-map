@@ -81,7 +81,7 @@ const PanelFilter = ({ filterHandle }) => {
 
   return (
     <div className="panel-filter">
-      <FormControl sx={{ width: "100%", margin: "20px 0" }}>
+      <form className="panel-filter-form" onSubmit={formHandle}>
         {/* <InputLabel id="type-select-label">Type</InputLabel>
         <Select
           labelId="type-select-label"
@@ -121,16 +121,8 @@ const PanelFilter = ({ filterHandle }) => {
           />
         </div>
 
-        <Button
-          sx={{ width: "200px", margin: "20px auto" }}
-          variant="contained"
-          className="panel-filter-submit"
-          type="submit"
-          onClick={formHandle}
-        >
-          Search
-        </Button>
-      </FormControl>
+        <button className="panel-filter-btn">Search</button>
+      </form>
     </div>
   );
 };
