@@ -13,7 +13,21 @@ const PointsList = ({ point, getPointId }) => {
         <div>name: {point.name}</div>
         <div>type: {point.type}</div>
         <div>address: {point.address}</div>
+        <div>phone: {point.phone_number}</div>
         <div>
+          Google maps link:{" "}
+          <a href={point.google_map == "-" ? undefined : point.google_map}>
+            {point.google_map}
+          </a>
+        </div>
+        <div>
+          website:{" "}
+          <a href={point.website == "-" ? undefined : point.website}>
+            {point.website}
+          </a>
+        </div>
+        <div className="points-list-rating-wrapper">
+          <div>Rating:</div>
           <Rating name="read-only" value={point.rating} readOnly />
         </div>
       </div>

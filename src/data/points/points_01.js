@@ -9,6 +9,7 @@ export const POINTS_01 = [
     rating: 4,
     type: "bar",
     website: "-",
+    google_map: "-",
   },
   {
     name: "Tot Gym",
@@ -20,6 +21,7 @@ export const POINTS_01 = [
     rating: 5,
     type: "shop",
     website: "https://www.totgym.es/",
+    google_map: "-",
   },
   {
     name: "Big Al's - Real American Burgers",
@@ -31,6 +33,7 @@ export const POINTS_01 = [
     rating: 5,
     type: "burger",
     website: "https://bigals.es/",
+    google_map: "-",
   },
   {
     name: "Sandra Restaurant",
@@ -42,6 +45,7 @@ export const POINTS_01 = [
     rating: 3,
     type: "shop",
     website: "-",
+    google_map: "-",
   },
   {
     name: "Farmàcia Farmaclínic Maria Guerra",
@@ -53,6 +57,8 @@ export const POINTS_01 = [
     id: 1815,
     rating: 3,
     type: "pharmacy",
+    website: "-",
+    google_map: "-",
   },
 
   {
@@ -65,6 +71,7 @@ export const POINTS_01 = [
     rating: 5,
     type: "tapas",
     website: "-",
+    google_map: "-",
   },
   {
     name: "Restaurant O Retorniño",
@@ -74,8 +81,9 @@ export const POINTS_01 = [
     block_address: 822,
     id: 1822,
     rating: 3,
-    type: "sea",
+    type: "sea-food",
     website: "http://www.oretorno.es/o-retornino",
+    google_map: "-",
   },
   {
     name: "Parking Hospital Clínic-CEK Telpark by Empark",
@@ -86,6 +94,8 @@ export const POINTS_01 = [
     id: 1823,
     rating: 3,
     type: "parking",
+    website: "-",
+    google_map: "-",
   },
   {
     name: "La Taverna del Clínic",
@@ -95,8 +105,9 @@ export const POINTS_01 = [
     block_address: 824,
     id: 1824,
     rating: 4,
-    type: "sea",
+    type: "sea-food",
     website: "https://www.latavernadelclinic.com/la-carta/",
+    google_map: "-",
   },
   {
     name: "Antico Caffè",
@@ -108,6 +119,7 @@ export const POINTS_01 = [
     rating: 4,
     type: "cafe",
     website: "https://www.bardelclinic.com/",
+    google_map: "-",
   },
 
   {
@@ -119,6 +131,8 @@ export const POINTS_01 = [
     id: 1912,
     rating: 3,
     type: "bar",
+    website: "-",
+    google_map: "-",
   },
   {
     name: "Restaurant O Retorninho 2",
@@ -128,7 +142,7 @@ export const POINTS_01 = [
     block_address: 913,
     id: 1913,
     rating: 3,
-    type: "sea",
+    type: "sea-food",
     website: "http://www.oretorno.es/carta",
     google_map: "https://goo.gl/maps/A1QepbYgdYibU6CDA",
   },
@@ -141,6 +155,8 @@ export const POINTS_01 = [
     id: 1914,
     rating: 5,
     type: "dessert",
+    website: "-",
+    google_map: "-",
   },
 
   {

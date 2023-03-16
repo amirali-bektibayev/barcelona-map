@@ -35,7 +35,7 @@ const PanelFilter = ({ filterHandle }) => {
         onChange={onChange}
       />
 
-      <label for={value} className="panel-filter-category-label">
+      <label htmlFor={value} className="panel-filter-category-label">
         {value}
       </label>
     </div>

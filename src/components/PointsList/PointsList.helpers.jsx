@@ -53,7 +53,7 @@ export const PointTypeImage = ({ point }) => {
       </div>
     );
   }
-  if (point.type == "sea") {
+  if (point.type == "sea-food") {
     return (
       <div>
         <img className="point-type-image" src={SeaFoodImg} />
