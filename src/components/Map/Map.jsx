@@ -4,7 +4,7 @@ import { MAP_BLOCK } from "../../data/map_block";
 import Map_block from "../Map_block/Map_block";
 import Map_filter from "../Map_filter/Map_filter";
 
-const Map = ({ clickedPoint }) => {
+const Map = () => {
   const [checkBoxArr, setCheckBoxArr] = useState();
 
   const map_blocks = MAP_BLOCK.map((block) => (
@@ -17,7 +17,6 @@ const Map = ({ clickedPoint }) => {
       display={block.display}
       pseudo={block.pseudo}
       checkBoxArr={checkBoxArr}
-      clickedPoint={clickedPoint}
     />
   ));
 

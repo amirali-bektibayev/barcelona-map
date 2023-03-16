@@ -5,7 +5,7 @@ import "./Point.style.css";
 import "./Point.icons.css";
 import { BLOCK_ID_CLASS } from "./Point.helpers";
 
-const Point = ({ id, point, clickedPoint }) => {
+const Point = ({ id, point }) => {
   const [hover, setHover] = useState("");
   const [modal, setModal] = useState("");
   const [pointId, setPointId] = useState("");

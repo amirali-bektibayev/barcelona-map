@@ -30,11 +30,10 @@ const PointsList = ({ point, getPointId }) => {
           <div>Rating:</div>
           <Rating name="read-only" value={point.rating} readOnly />
         </div>
+        <button onClick={() => getPointId(point.id)}>
+          Click here to see this point on map
+        </button>
       </div>
-
-      {/* <button onClick={() => getPointId(point.id)}>
-        Click here to see this point on map
-      </button> */}
     </div>
   );
 };
