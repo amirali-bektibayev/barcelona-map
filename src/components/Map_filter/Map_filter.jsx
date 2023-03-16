@@ -1,38 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Map_filter.style.css";
 import { ALL_POINTS } from "../../data/points/all_points";
+import useCheckBox from "../../hooks/useCheckBox";
 
 const Map_filter = ({ checkboxValues }) => {
-  const [filters, setFilters] = useState([]);
+  const { filters, filteredTypes, onFilterChange } = useCheckBox();
 
-  useEffect(() => {
-    const filterValues = [
-      ...new Set(["all", ...ALL_POINTS.map((n) => n.type)]),
-    ];
-    setFilters(
-      filterValues.map((n, i) => ({ active: false, value: n, id: i + 1 }))
-    );
-  }, [ALL_POINTS]);
-
-  const onFilterChange = ({
-    target: {
-      checked: active,
-      dataset: { value },
-    },
-  }) => {
-    const newFilters = filters.map((n) =>
-        [n.value, "all"].includes(value) ? { ...n, active } : n
-      ),
-      isAll = newFilters
-        .filter((n) => n.value !== "all")
-        .every((n) => n.active);
-
-    newFilters.find((n) => n.value === "all").active = isAll;
-
-    setFilters(newFilters);
-  };
-
-  const filteredTypes = filters.filter((n) => n.active).map((n) => n.value);
   const filteredItems = ALL_POINTS.filter((n) =>
     filteredTypes.includes(n.type)
   );

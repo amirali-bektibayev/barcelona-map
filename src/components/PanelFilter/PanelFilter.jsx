@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import Rating from "@mui/material/Rating";
 import "./PanelFilter.style.css";
 import { ALL_POINTS } from "../../data/points/all_points";
+import useCheckBox from "../../hooks/useCheckBox";
 
 const PanelFilter = ({ filterHandle }) => {
+  const { filters, filteredTypes, onFilterChange } = useCheckBox();
+
   const [minStars, setMinStars] = useState(0);
   const [maxStars, setMaxStars] = useState(5);
 
@@ -14,36 +17,6 @@ const PanelFilter = ({ filterHandle }) => {
     setMaxStars(minStars + 1);
   }
 
-  const [filters, setFilters] = useState([]);
-
-  useEffect(() => {
-    const filterValues = [
-      ...new Set(["all", ...ALL_POINTS.map((n) => n.type)]),
-    ];
-    setFilters(
-      filterValues.map((n, i) => ({ active: false, value: n, id: i + 1 }))
-    );
-  }, [ALL_POINTS]);
-
-  const onFilterChange = ({
-    target: {
-      checked: active,
-      dataset: { value },
-    },
-  }) => {
-    const newFilters = filters.map((n) =>
-        [n.value, "all"].includes(value) ? { ...n, active } : n
-      ),
-      isAll = newFilters
-        .filter((n) => n.value !== "all")
-        .every((n) => n.active);
-
-    newFilters.find((n) => n.value === "all").active = isAll;
-
-    setFilters(newFilters);
-  };
-
-  const filteredTypes = filters.filter((n) => n.active).map((n) => n.value);
   const filteredItems = ALL_POINTS.filter(
     (n) =>
       filteredTypes.includes(n.type) &&
@@ -76,16 +49,6 @@ const PanelFilter = ({ filterHandle }) => {
   return (
     <div className="panel-filter">
       <form className="panel-filter-form" onSubmit={formHandle}>
-        {/* <InputLabel id="type-select-label">Type</InputLabel>
-        <Select
-          labelId="type-select-label"
-          id="type-select"
-          label="Type"
-          value={typeValue ? typeValue : all}
-          onChange={typeValueHandle}
-        >
-          {typesOptions}
-        </Select> */}
         <div className="panel-filter-h2">Categories</div>
         <div className="panel-filter-category">
           {filters.map((n) => (
