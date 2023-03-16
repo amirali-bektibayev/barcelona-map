@@ -5,6 +5,7 @@ import Panel from "./components/Panel/Panel";
 import Header from "./components/Header/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Outlet, Link } from "react-router-dom";
+import Home from "./components/Home/Home";
 
 function App() {
   const [clickedPoint, setClickedPoint] = useState("");
@@ -18,7 +19,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Header />}>
-          <Route index element={<div>Home</div>} />
+          <Route index element={<Home />} />
           <Route
             index
             path="map"
