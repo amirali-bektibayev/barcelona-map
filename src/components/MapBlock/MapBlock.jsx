@@ -1,15 +1,15 @@
 import React from "react";
 import Points from "../Points/Points";
-import "./Map_block.style.css";
+import "./MapBlock.style.css";
 import {
   streetColumn,
   streetRow,
   triangleArago,
   streetEdgeRow,
   streetEdgeColumn,
-} from "./Map.helpers";
+} from "./MapBlock.helpers";
 
-const Map_block = ({
+const MapBlock = ({
   id,
   street_column,
   street_row,
@@ -18,11 +18,10 @@ const Map_block = ({
   pseudo,
   checkboxValues,
   checkBoxArr,
-  clickedPoint,
 }) => {
   return (
     <div
-      style={{ opacity: display == false ? "0" : "1" }}
+      style={{ opacity: display === false ? "0" : "1" }}
       className={`map_block block_${id}`}
     >
       {/* <div className="map_block-id">{id}</div> */}
@@ -35,10 +34,9 @@ const Map_block = ({
         checkBoxArr={checkBoxArr}
         id={id}
         checkboxValues={checkboxValues}
-        clickedPoint={clickedPoint}
       />
     </div>
   );
 };
 
-export default Map_block;
+export default MapBlock;

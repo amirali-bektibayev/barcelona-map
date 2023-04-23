@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./Map.style.css";
 import { MAP_BLOCK } from "../../data/map_block";
-import Map_block from "../Map_block/Map_block";
-import Map_filter from "../Map_filter/Map_filter";
+import MapBlock from "../MapBlock/MapBlock";
+import MapFilter from "../MapFilter/MapFilter";
 
-const Map = ({ clickedPoint }) => {
+const Map = () => {
   const [checkBoxArr, setCheckBoxArr] = useState();
 
   const map_blocks = MAP_BLOCK.map((block) => (
-    <Map_block
+    <MapBlock
       key={block.id}
       id={block.id}
       street_column={block.street_column}
@@ -17,21 +17,18 @@ const Map = ({ clickedPoint }) => {
       display={block.display}
       pseudo={block.pseudo}
       checkBoxArr={checkBoxArr}
-      clickedPoint={clickedPoint}
     />
   ));
 
   const checkboxValues = (arr) => {
-    console.log(arr);
-
     setCheckBoxArr(arr);
   };
 
   return (
     <div className="map-wrapper">
       <div className="map">{map_blocks}</div>
-      <div className="map-filter">
-        <Map_filter checkboxValues={checkboxValues} />
+      <div className="map-right">
+        <MapFilter checkboxValues={checkboxValues} />
       </div>
     </div>
   );

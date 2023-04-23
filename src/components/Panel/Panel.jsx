@@ -13,11 +13,10 @@ const Panel = ({ getPointId }) => {
 
   const pointsBlock = points
     .slice(firstContentIndex, lastContentIndex)
-    .map((p) => {
-      if (points.length === 0) {
-        return <div>No</div>;
-      }
-      return <PointsList key={p.id} getPointId={getPointId} point={p} />;
+    .map((point) => {
+      return (
+        <PointsList key={point.id} getPointId={getPointId} point={point} />
+      );
     });
 
   const filterHandle = (filteredPoints) => {

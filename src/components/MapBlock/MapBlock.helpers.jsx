@@ -9,14 +9,14 @@ export const streetRow = (street_row) =>
   street_row ? <div className="map_block-street-row">{street_row}</div> : "";
 
 export const streetEdgeRow = (street_edge, id) =>
-  street_edge && id == 4 ? (
+  street_edge && id === 4 ? (
     <div className="map_block-street-edge-row">{street_edge}</div>
   ) : (
     ""
   );
 
 export const streetEdgeColumn = (street_edge, id) =>
-  street_edge && id == 22 ? (
+  street_edge && id === 22 ? (
     <div className="map_block-street-edge-column">{street_edge}</div>
   ) : (
     ""
