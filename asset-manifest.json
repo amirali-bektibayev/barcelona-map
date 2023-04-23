@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/barcelona-map/static/css/main.e5c75c6d.css",
+    "main.js": "/barcelona-map/static/js/main.731b63ca.js",
+    "static/media/pizza.jpg": "/barcelona-map/static/media/pizza.125f02d5058464f99055.jpg",
+    "static/media/fast-food.jpg": "/barcelona-map/static/media/fast-food.65d8924d1d6b954634cc.jpg",
+    "static/media/pharmacy.jpg": "/barcelona-map/static/media/pharmacy.4ca61dac4bd93f6a0597.jpg",
+    "static/media/cafe.jpg": "/barcelona-map/static/media/cafe.d0af7d628d04bb50c1db.jpg",
+    "static/media/sea-food.jpg": "/barcelona-map/static/media/sea-food.ed8e615ed3a92e9d011a.jpg",
+    "static/media/tapas.jpg": "/barcelona-map/static/media/tapas.bb352387b58161cce317.jpg",
+    "static/media/beer.jpg": "/barcelona-map/static/media/beer.d85d76375017e82f5ff7.jpg",
+    "static/media/burger.jpg": "/barcelona-map/static/media/burger.b0cce08d5fbb08a89709.jpg",
+    "static/media/parking.jpg": "/barcelona-map/static/media/parking.5b5f3b436a54c9d0bbfc.jpg",
+    "static/media/shop.jpg": "/barcelona-map/static/media/shop.8be09a857c6eb90846a9.jpg",
+    "static/media/dessert.jpg": "/barcelona-map/static/media/dessert.3c556308626ca792b579.jpg",
+    "index.html": "/barcelona-map/index.html",
+    "main.e5c75c6d.css.map": "/barcelona-map/static/css/main.e5c75c6d.css.map",
+    "main.731b63ca.js.map": "/barcelona-map/static/js/main.731b63ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5c75c6d.css",
+    "static/js/main.731b63ca.js"
+  ]
+}
