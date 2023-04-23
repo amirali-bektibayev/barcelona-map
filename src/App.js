@@ -4,7 +4,6 @@ import Map from "./components/Map/Map";
 import Panel from "./components/Panel/Panel";
 import Header from "./components/Header/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Outlet, Link } from "react-router-dom";
 import Home from "./components/Home/Home";
 
 function App() {
@@ -25,10 +24,6 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-    // <div className="App">
-    //   <Map clickedPoint={clickedPoint} />
-    //   <Panel getPointId={getPointId} />
-    // </div>
   );
 }
 
