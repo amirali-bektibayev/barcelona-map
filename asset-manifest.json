@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/barcelona-map/static/css/main.e5c75c6d.css",
-    "main.js": "/barcelona-map/static/js/main.731b63ca.js",
+    "main.js": "/barcelona-map/static/js/main.c75630f0.js",
     "static/media/pizza.jpg": "/barcelona-map/static/media/pizza.125f02d5058464f99055.jpg",
     "static/media/fast-food.jpg": "/barcelona-map/static/media/fast-food.65d8924d1d6b954634cc.jpg",
     "static/media/pharmacy.jpg": "/barcelona-map/static/media/pharmacy.4ca61dac4bd93f6a0597.jpg",
@@ -15,10 +15,10 @@
     "static/media/dessert.jpg": "/barcelona-map/static/media/dessert.3c556308626ca792b579.jpg",
     "index.html": "/barcelona-map/index.html",
     "main.e5c75c6d.css.map": "/barcelona-map/static/css/main.e5c75c6d.css.map",
-    "main.731b63ca.js.map": "/barcelona-map/static/js/main.731b63ca.js.map"
+    "main.c75630f0.js.map": "/barcelona-map/static/js/main.c75630f0.js.map"
   },
   "entrypoints": [
     "static/css/main.e5c75c6d.css",
-    "static/js/main.731b63ca.js"
+    "static/js/main.c75630f0.js"
   ]
 }
