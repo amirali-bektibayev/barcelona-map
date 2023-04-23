@@ -3,7 +3,7 @@ import "./App.css";
 import Map from "./components/Map/Map";
 import Panel from "./components/Panel/Panel";
 import Header from "./components/Header/Header";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Header />}>
           <Route index element={<Home />} />
@@ -23,7 +23,7 @@ function App() {
           <Route path="panel" element={<Panel getPointId={getPointId} />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
