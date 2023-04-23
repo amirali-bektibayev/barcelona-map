@@ -4,15 +4,24 @@ import { MAP_BLOCK } from "../../data/map_block";
 import Map_block from "../Map_block/Map_block";
 import Map_filter from "../Map_filter/Map_filter";
 import { useSelector } from "react-redux";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const Map = () => {
   const [checkBoxArr, setCheckBoxArr] = useState();
+  const [showClickedPoints, setShowClickedPoints] = useState(false);
 
   const clickedArr = useSelector((state) => state.clickedPoints.points);
 
   const newSetClickerArr = new Set(clickedArr);
   const clicked_block = Array.from(newSetClickerArr).map((clickedPoint) => {
-    return <div>{clickedPoint.name}</div>;
+    return (
+      <div className="map-clicked-list-item" key={clickedPoint.id}>
+        <div>{clickedPoint.name}</div>
+        <div className="map-clicked-list-item-delete">
+          <DeleteIcon />
+        </div>
+      </div>
+    );
   });
 
   const map_blocks = MAP_BLOCK.map((block) => (
@@ -25,6 +34,7 @@ const Map = () => {
       display={block.display}
       pseudo={block.pseudo}
       checkBoxArr={checkBoxArr}
+      showClickedPoints={showClickedPoints}
     />
   ));
 
@@ -47,6 +57,15 @@ const Map = () => {
             Clicked points from Panel
           </div>
           {clicked_block}
+          {!showClickedPoints ? (
+            <button onClick={() => setShowClickedPoints(true)}>
+              Show clicked points
+            </button>
+          ) : (
+            <button onClick={() => setShowClickedPoints(false)}>
+              Hide clicked points
+            </button>
+          )}
         </div>
       </div>
     </div>

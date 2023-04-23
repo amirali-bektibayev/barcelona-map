@@ -34,3 +34,21 @@
   font-size: 18px;
   font-weight: 600;
 }
+
+.map-clicked-list-item {
+  padding: 5px;
+  margin: 10px 0;
+  border: 1px solid #000;
+  transition: 0.3s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.map-clicked-list-item:hover {
+  cursor: pointer;
+  background-color: antiquewhite;
+}
+
+.map-clicked-list-item > div:first-child {
+  max-width: 150px;
+}

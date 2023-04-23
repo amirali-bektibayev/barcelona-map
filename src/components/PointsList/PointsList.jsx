@@ -4,11 +4,22 @@ import Rating from "@mui/material/Rating";
 import { PointTypeImage } from "./PointsList.helpers";
 import { useDispatch } from "react-redux";
 import { addClickedPoint } from "../../store/clickedSlice";
+import { useSelector } from "react-redux";
 
 const PointsList = ({ point, getPointId }) => {
   const dispatch = useDispatch();
 
   const pushId = () => dispatch(addClickedPoint(point));
+  const clickedArr = useSelector((state) => state.clickedPoints.points);
+  console.log(clickedArr);
+
+  const clickedState = () => {
+    for (let i = 0; i < clickedArr.length; i++) {
+      if (clickedArr[i].id == point.id) {
+        return true;
+      }
+    }
+  };
 
   return (
     <div className="points-list-item">
@@ -39,6 +50,7 @@ const PointsList = ({ point, getPointId }) => {
         <button onClick={() => pushId()}>
           Click here to see this point on map
         </button>
+        {clickedState() && <div>Clicked</div>}
       </div>
     </div>
   );

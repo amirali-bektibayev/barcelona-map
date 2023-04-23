@@ -11,7 +11,7 @@ const useCheckBox = () => {
     setFilters(
       filterValues.map((n, i) => ({ active: false, value: n, id: i + 1 }))
     );
-  }, [ALL_POINTS]);
+  }, []);
 
   const onFilterChange = ({
     target: {
