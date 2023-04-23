@@ -2,25 +2,8 @@ import React from "react";
 import "./PointsList.style.css";
 import Rating from "@mui/material/Rating";
 import { PointTypeImage } from "./PointsList.helpers";
-import { useDispatch } from "react-redux";
-import { addClickedPoint } from "../../store/clickedSlice";
-import { useSelector } from "react-redux";
 
-const PointsList = ({ point, getPointId }) => {
-  const dispatch = useDispatch();
-
-  const pushId = () => dispatch(addClickedPoint(point));
-  const clickedArr = useSelector((state) => state.clickedPoints.points);
-  console.log(clickedArr);
-
-  const clickedState = () => {
-    for (let i = 0; i < clickedArr.length; i++) {
-      if (clickedArr[i].id == point.id) {
-        return true;
-      }
-    }
-  };
-
+const PointsList = ({ point }) => {
   return (
     <div className="points-list-item">
       <div>
@@ -33,13 +16,13 @@ const PointsList = ({ point, getPointId }) => {
         <div>phone: {point.phone_number}</div>
         <div>
           Google maps link:{" "}
-          <a href={point.google_map == "-" ? undefined : point.google_map}>
+          <a href={point.google_map === "-" ? undefined : point.google_map}>
             {point.google_map}
           </a>
         </div>
         <div>
           website:{" "}
-          <a href={point.website == "-" ? undefined : point.website}>
+          <a href={point.website === "-" ? undefined : point.website}>
             {point.website}
           </a>
         </div>
@@ -47,10 +30,6 @@ const PointsList = ({ point, getPointId }) => {
           <div>Rating:</div>
           <Rating name="read-only" value={point.rating} readOnly />
         </div>
-        <button onClick={() => pushId()}>
-          Click here to see this point on map
-        </button>
-        {clickedState() && <div>Clicked</div>}
       </div>
     </div>
   );
